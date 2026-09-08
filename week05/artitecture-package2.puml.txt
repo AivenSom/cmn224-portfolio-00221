@@ -1,0 +1,26 @@
+@startuml
+
+node "Depot laptop" {
+  [Intake App]
+  database "Local SQLite"
+}
+
+node "Field phone" {
+  [Field Capture / Sync]
+  database "Local Phone Cache"
+}
+
+node "Town office PC" {
+  [Consolidation]
+  database "Master DB"
+}
+
+node "Office printer" {
+  [Print Service]
+}
+
+[Intake App] ..> [Consolidation] : USB or 4G\nwhen available / intermittent
+[Field Capture / Sync] ..> [Intake App] : USB or 4G\nwhen available / intermittent
+[Consolidation] --> [Print Service] : Local office network\nwhen available
+
+@enduml
