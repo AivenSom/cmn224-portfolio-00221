@@ -12,6 +12,12 @@ Project Structure
 cmn224-portfolio-00221/
 ├── week01/
 ├── week02/
+├── week03/
+├── week04/
+├── week05/
+├── week06/
+├── week09/
+├── week11/
 ├── src/
 ├── tests/
 ├── docs/
